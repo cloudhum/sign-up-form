@@ -1,0 +1,76 @@
+* {
+    border: solid red 1px;
+    box-sizing: border-box;
+}
+
+body {
+    /* min-height: 1482px; */
+    height: 100vh;
+    padding:0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    /* flex-wrap: wrap; */
+    /* min-height: 100vh; */
+}
+
+
+.image-sidebar {
+    /* flex-grow: 1; */
+    background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);
+    flex: 1 1 33%;
+    /* min-height: 100vh;
+    object-fit: none;
+    background-repeat: no-repeat;
+   */
+    /* min-height: 100%;
+    max-width: 977px; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* img {
+    height: 2000px;
+    object-fit: cover;
+} */
+
+.log-bg {
+
+}
+
+.right-content {
+    display:flex;
+    flex-direction: column;
+    flex: 1 1 77%;
+    /* min-height: 1482px; */
+}
+
+.top-row, .form, .bottom-row {
+    flex: 1 1 33%;
+    padding: 80px;
+
+}
+
+.top-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.bottom-row {
+    
+}
+
+button {
+    border-radius: 6px;
+    padding: 30px 60px;
+    font-size: 100%;
+    color: white;
+    font-weight: bold;
+    background-color: #596D48;
+}
