@@ -9,22 +9,60 @@
 </head>
 <body>
     <div class="container">
-        <div class="image-sidebar">image sidebar
+        <div class="image-sidebar">
             <div class="logo-bg">
-                <!-- <img src="https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt=""> -->
+                <div class="logo">
+                    <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png" alt="">
+                    <p>Vision</p>
+                </div>
             </div>
         </div>
         <div class="right-content"> 
             <div class="top-row">
-                <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h2>
-                <h2>You know what to do</h2>
+                <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</h1>
+                <h1>You know what to do.</h1>
             </div> 
             <div class="form">
-                <h2>Let's do this</h2>
-                <form action=""></form>
+                <h1>Let's do this!</h1>
+                <form action="example.com/path" method="post" id="user-info">
+                    <div class="form-top-row">
+                        <div class="first-name">
+                            <label for="first-name">First Name</label>
+                            <input type="text" name="first-name" id="first-name">
+                        </div>
+                            
+                        <div class="last-name">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name" id="last-name">
+                        </div>
+                    </div>
+                    <div class="form-middle-row">
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                            
+                        <div class="phone-number">
+                            <label for="phone-number">Phone Number</label>
+                            <input type="tel" name="phone-number" id="phone-number">
+                        </div>
+                    </div>
+                    <div class="form-bottom-row">
+                        <div class="password">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        
+                        <div class="confirm-password">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" name="confirm-password" id="confirm-password">
+                        </div>
+                    </div>
+                </form>
             </div> 
             <div class="bottom-row">
-                <button>Create Account</button>
+                <button type="submit" form="user-info">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
             </div> 
     </div>
 </body>

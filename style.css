@@ -1,5 +1,5 @@
 * {
-    border: solid red 1px;
+    /* border: solid red 1px; */
     box-sizing: border-box;
 }
 
@@ -11,11 +11,32 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* @media  */
+/* TODO: create media query to use flex column when below certain width */
+/* At smaller width remove gap from form elements */
+
+/* @media only screen and (max-height: 1127px){
+    .container{
+        flex-direction: column;
+    }
+
+    .image-sidebar {
+        min-height: 33%;
+    }
+}
+
+@media only screen and (max-width:1038px ){
+    .container {
+        flex-direction: column;
+    }
+} */
+
 .container {
     display: flex;
     height: 100vh;
     /* flex-wrap: wrap; */
     /* min-height: 100vh; */
+    /* max-height: 1127px; */
 }
 
 
@@ -23,54 +44,111 @@ body {
     /* flex-grow: 1; */
     background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);
     flex: 1 1 33%;
-    /* min-height: 100vh;
-    object-fit: none;
-    background-repeat: no-repeat;
-   */
-    /* min-height: 100%;
-    max-width: 977px; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    display:flex;
+  
 }
 
-/* img {
-    height: 2000px;
-    object-fit: cover;
-} */
+.logo-bg {
+    background-color: black;
+    /* height: 200px;
+    min-width: ; */
+    position: absolute;
+    width: 100%;
 
-.log-bg {
+    top: 30%;
+    height:20%;
+    opacity: 50%;
+   
+    
+}
 
+.logo-bg p {
+    color: white;
+    font-size: 70px;
+}
+
+.logo {
+    content:"";
+    display:flex;
+    gap: 20px;
+    height: 10rem;
+    position:relative;
+    top: 18%;
+    left: 30%;
 }
 
 .right-content {
     display:flex;
     flex-direction: column;
     flex: 1 1 77%;
-    /* min-height: 1482px; */
+    min-height: 865px;
 }
 
-.top-row, .form, .bottom-row {
+.top-row,  .bottom-row {
     flex: 1 1 33%;
     padding: 80px;
-
 }
 
 .top-row {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    padding-bottom: 60px;
+}
+
+.form-top-row, .form-middle-row, .form-bottom-row {
+   display: flex;
+   gap: 100px;
+   flex-wrap: wrap;
+   margin-bottom: 20px;
+}
+
+.form {
+    padding: 40px 80px;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 200px;
+    /* height: 40px; */
+    font-size: 25px;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
 }
 
 .bottom-row {
-    
+    padding-top: 40px;
 }
 
-button {
-    border-radius: 6px;
-    padding: 30px 60px;
-    font-size: 100%;
+.top-row, .bottom-row {
+    background-color: rgb(247, 246, 246);
+}
+
+.bottom-row button {
+    border-radius: 10px;
+    padding: 20px 80px;
+    font-size: 25px;
     color: white;
     font-weight: bold;
-    background-color: #596D48;
+    background-color: #596D48;    
+    margin-bottom: 25px;
+}
+
+.bottom-row p {
+    font-size: 25px;
+
+  
+}
+
+.bottom-row a {
+    text-decoration: none;
+    color:#596D48;
 }
