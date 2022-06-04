@@ -1,94 +1,69 @@
 * {
-    /* border: solid red 1px; */
-    box-sizing: border-box;
-}
-
-body {
-    /* min-height: 1482px; */
-    height: 100vh;
+    box-sizing: border-box; 
     padding:0px;
     margin:0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* @media  */
-/* TODO: create media query to use flex column when below certain width */
-/* At smaller width remove gap from form elements */
-
-/* @media only screen and (max-height: 1127px){
-    .container{
-        flex-direction: column;
-    }
-
-    .image-sidebar {
-        min-height: 33%;
-    }
-}
-
-@media only screen and (max-width:1038px ){
-    .container {
-        flex-direction: column;
-    }
-} */
-
 .container {
     display: flex;
+    flex-flow: row wrap;
     height: 100vh;
-    /* flex-wrap: wrap; */
-    /* min-height: 100vh; */
-    /* max-height: 1127px; */
+    width:100vw;
+    flex-flow: row wrap;
 }
 
-
 .image-sidebar {
-    /* flex-grow: 1; */
     background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80);
-    flex: 1 1 33%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    display:flex;
-  
+    min-width: 40vw;
 }
 
 .logo-bg {
     background-color: black;
-    /* height: 200px;
-    min-width: ; */
     position: absolute;
     width: 100%;
-
     top: 30%;
     height:20%;
     opacity: 50%;
-   
-    
+    display:flex;
+    gap: 20px;
 }
 
-.logo-bg p {
+/* .logo-bg p {
     color: white;
     font-size: 70px;
+} */
+
+.logo, .logo-text {
+    color:white;
+    position:relative;
+    height: 50%;
+    top: 30%;
+    left: 30%;
+}
+
+.logo-text {
+    font-size: 3rem;
+    top:40%;
 }
 
 .logo {
-    content:"";
-    display:flex;
-    gap: 20px;
-    height: 10rem;
-    position:relative;
-    top: 18%;
-    left: 30%;
+
 }
 
 .right-content {
     display:flex;
     flex-direction: column;
-    flex: 1 1 77%;
-    min-height: 865px;
+    width: 60vw;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
-.top-row,  .bottom-row {
+.top-row, .form, .bottom-row {
     flex: 1 1 33%;
     padding: 80px;
 }
@@ -140,6 +115,7 @@ input {
     font-weight: bold;
     background-color: #596D48;    
     margin-bottom: 25px;
+    
 }
 
 .bottom-row p {
